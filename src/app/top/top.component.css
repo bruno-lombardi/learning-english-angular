@@ -1,0 +1,15 @@
+.bg-green {
+    background-color: #1dd1a1;
+}
+
+.brand-light {
+    color: #dff7e6;
+}
+
+.brand-light:hover {
+    color: #dff7e6;
+}
+
+.navbar-brand {
+    font-family: 'Fredoka One', cursive;
+}
