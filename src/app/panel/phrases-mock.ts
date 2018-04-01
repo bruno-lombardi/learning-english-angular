@@ -6,7 +6,7 @@ export const PHRASES: Phrase[] = [
         langPtBr: 'Eu gosto de aprender'
     },
     {
-        langEnUS: 'I watch tv',
+        langEnUS: 'I watch TV',
         langPtBr: 'Eu assisto TV'
     },
     {
@@ -14,7 +14,7 @@ export const PHRASES: Phrase[] = [
         langPtBr: 'Como vai você?'
     },
     {
-        langEnUS: 'I like to programm',
+        langEnUS: 'I like to program',
         langPtBr: 'Eu gosto de programar'
     },
 ];

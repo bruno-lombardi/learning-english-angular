@@ -4,11 +4,11 @@
 
       <div class="row">
         <div class="col-sm-6">
-          <app-progress></app-progress>
+          <app-progress [progress]="progress"></app-progress>
         </div>
         <div class="col-sm-6">
           <div class="d-flex justify-content-end">
-            <app-tries></app-tries>
+            <app-tries [tries]="tries"></app-tries>
           </div>
         </div>
       </div>
@@ -16,12 +16,12 @@
       <div class="row">
         <div class="col">
           <h4>Traduza esta frase:</h4>
-          <p class="alert alert-secondary">How are you doing?</p>
+          <p class="alert alert-secondary">{{ roundPhrase.langEnUS }}</p>
           <div class="form-group">
-            <textarea rows="3" class="form-control"></textarea>
+            <textarea (input)="updateAnswer($event)"rows="3" class="form-control" [value]="answer"></textarea>
           </div>
           <div class="d-flex justify-content-end">
-            <button class="btn btn-primary">Verificar</button>
+            <button (click)="verifyAnswer()" class="btn btn-primary">Verificar</button>
           </div>
         </div>
       </div>

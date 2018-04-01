@@ -1,3 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-top></app-top>
-<app-panel></app-panel>
+<div *ngIf="gameInProgress; else endedGame">
+  <app-panel (endGame)="endGame($event)"></app-panel>
+</div>
+
+<ng-template #endedGame>
+  <div *ngIf="endedGameType === 'lose'; else endedGameWinner" class="row mt-3">
+    <div class="col text-center">
+      <h3 class="text-danger">Você perdeu! Tente novamente.</h3>
+      <button class="btn btn-primary" (click)="restartGame()">Tentar denovo</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #endedGameWinner>
+  <div class="row mt-3">
+    <div class="col text-center">
+      <h3 class="text-success">Parabéns, você acertou todas as traduções!</h3>
+      <button class="btn btn-primary" (click)="restartGame()">Tentar denovo</button>
+    </div>
+  </div>
+</ng-template>
